@@ -8,10 +8,10 @@ from var import Var
 os.system("pip install --upgrade pip")
 if Var.STRING_SESSION:
     session_name = str(Var.STRING_SESSION)
-    bot = TelegramClient(StringSession(session_name), Var.APP_ID, Var.API_HASH)
+    bot = TelegramClient(StringSession(session_name), Var.1315651, Var.0deb048d00bf4f846eb3a873190990ef)
 else:
     session_name = "startup"
-    bot = TelegramClient(session_name, Var.APP_ID, Var.API_HASH)
+    bot = TelegramClient(session_name, Var.1315651, Var.0deb048d00bf4f846eb3a873190990ef)
 
 
 CMD_LIST = {}
@@ -48,7 +48,7 @@ if bool(ENV):
     # Check if the config was edited by using the already used variable.
     # Basically, its the 'virginity check' for the config file ;)
     CONFIG_CHECK = os.environ.get(
-        "___________PLOX_______REMOVE_____THIS_____LINE__________", None)
+        "", None)
 
     if CONFIG_CHECK:
         LOGS.info(
